@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %}register page{% endblock %}
+{% block contents %}
+<h1>register page</h1>
+<br>
+<form action="{{ url_for('auth.cose') }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }}
+    {{ form.username }}
+    {{ form.password.label }}
+    {{ form.password }}
+    {{ form.submit }}
+</form>
+<br>
+<a href="{{ url_for('auth.login') }}">login</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+
+<h1>Actualizar usuario</h1>
+<br>
+
+
+<br>
+<form action="{{ url_for('Recursos.update', RecursosId = RecursosId.id) }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }}
+    {{ form.username }}
+    {{ form.password.label }}
+    {{ form.password }}
+    {{ form.submit }}
+</form>

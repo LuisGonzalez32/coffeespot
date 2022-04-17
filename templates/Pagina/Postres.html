@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style6.css">
+    <title>Postres</title>
+</head>
+<body>
+
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    
+    <h2>Postres</h2>
+
+<section>
+  <nav2>
+    <ul>
+        <pre><li>Disfruta de nuestros deliciosos <br> postres tradicionales:</li>
+            <li>Tres Leches                      $1.50</li>
+            <li>Brownie                              $1.50</li>
+            <li>Pie De Manzana                 $1.50</li></pre>
+    </ul>
+  </nav2>
+  
+  <article>
+    <img src="/static/imagenes/Postres.jpg" alt="Foto" width="750" height="540">
+  </article>
+</section>
+
+<footer>
+  <pre>Nota:</pre>
+</footer>
+</body>
+</html>

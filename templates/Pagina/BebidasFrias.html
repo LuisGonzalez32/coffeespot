@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style4.css">
+    <title>Bebidas Frias</title>
+</head>
+<body>
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <h2>Bebidas Frias</h2>
+
+<section>
+  <nav2>
+    <ul>
+        <pre><li>Iced latte                                 $2.00</li>
+            <li>Iced Mocca                              $2.25</li>
+            <li>Iced Mocca Menta                 $2.50</li>
+            <li>Frappé                                      $2.25</li>
+            <li>Granizado                               $2.00</li></pre>
+    </ul>
+  </nav2>
+  
+  <article>
+    <img src="/static/imagenes/BebidasFrias.jpeg" alt="Foto" width="765" height="550">
+  </article>
+</section>
+
+<footer>
+  <pre>Sabores del Frappé: Chocolate y Vainilla       Sabores del Granizado: Cappuggino y Caramelo</pre>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>

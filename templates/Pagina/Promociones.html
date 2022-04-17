@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style7.css">
+    <title>Promociones</title>
+</head>
+<body>
+
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <section>
+      <nav2>
+        <ul>
+            <img src="/static/imagenes/promocion.jpg" alt="Foto" width="500" height="500">
+        </ul>
+      </nav2>
+      
+      <article>
+        <img src="/static/imagenes/promocion2.jpg" alt="Foto" width="770" height="600">
+      </article>
+    </section>
+    
+    <footer>
+      <pre>Nota:Confirmar si la promoción sigue vigente en el dia del consumo</pre>
+    </footer>
+</body>
+</html>

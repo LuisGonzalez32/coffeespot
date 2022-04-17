@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block title %}login page{% endblock %}
+{% block contents %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style.css">
+    <title>LogIn_Inventario</title>
+</head><script src="https://kit.fontawesome.com/42a3b7e233.js" crossorigin="anonymous"></script>
+
+<body>
+    <div>
+        <form class="formulario">
+
+            <h1>Iniciar Sesion</h1>
+            <p>Ingresar usuario y contraseña para poder acceder a la administración de Coffee Spot:
+            <div class="contenedor">
+
+            <form action="{{ url_for('auth.login') }}" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.username.label }}
+                {{ form.username }}
+                {{ form.password.label }}
+                {{ form.password }}
+                {{ form.submit }}
+
+            </div>
+        </form>
+        <a href="{{ url_for('auth.register') }}" class="boton">Ir a la pagina web</a>
+    </div>
+
+    <style>
+        body{
+           background: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
+            url("/static/imagenes/coffeespot.jpg") no-repeat center
+            center fixed;
+            background-size: cover;
+        }
+    </style> 
+
+</body>
+ 
+
+{% endblock %}

@@ -1,0 +1,53 @@
+
+<style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+</style>
+
+
+<br>
+<a href="{{ url_for('Recursos.create') }}">Crear usuario</a>
+<br>
+<table id="customers">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Status</th>
+            <th>Rank</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in recursos %}
+        <tr>
+            <td>{{ item.username }}</td>
+            <td>{{ item.password }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.rank }}</td>
+            <td><a href="{{ url_for('Recursos.update', RecursosId=item.id) }}">Update</a></td>
+            <td><a href="{{ url_for('Recursos.delete', RecursosId=item.id) }}">Delete</a></td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

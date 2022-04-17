@@ -1,0 +1,21 @@
+<h1>task create</h1>
+<br>
+
+
+<p>task create</p>
+<br>
+<form action="{{ url_for('Inventario.create') }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.productId.label }}
+    {{ form.productId }}
+    {{ form.code.label }}
+    {{ form.code }}
+    {{ form.description.label }}
+    {{ form.description }}
+    {{ form.price.label }}
+    {{ form.price }}
+    {{ form.stock.label }}
+    {{ form.stock }}
+    {{ form.submit }}
+</form>
+

@@ -1,0 +1,54 @@
+<style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+</style>
+
+
+<br>
+<a href="{{ url_for('Inventario.create') }}">create an order</a>
+<br>
+<table id="customers">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in invent %}
+        <tr>
+            <td>{{ item.productId }}</td>
+            <td>{{ item.code }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.stock }}</td>
+            <td><a href="{{ url_for('Inventario.update', inventarioId=item.id) }}">Update</a></td>
+            <td><a href="{{ url_for('Inventario.delete', inventarioId=item.id) }}">Delete</a></td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

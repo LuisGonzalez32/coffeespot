@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style8.css">
+    <title>Acerca</title>
+</head>
+<body>
+
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="main">
+        <section class="articles">
+            <article>
+                <h1>Acerca de Coffee Spot</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla reiciendis nisi natus perspiciatis! Maxime expedita minima ipsam veritatis! Amet mollitia veniam numquam explicabo ut, quae sed corrupti et esse repellat!</p>
+            </article>
+            <article>
+                <h1>Acerca de nuestro cafe</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla reiciendis nisi natus perspiciatis! Maxime expedita minima ipsam veritatis! Amet mollitia veniam numquam explicabo ut, quae sed corrupti et esse repellat!</p>
+            </article>
+
+
+        </section>
+
+        <aside>
+            <h2>Usuario Ig: <a href="https://instagram.com/coffeespotsv?utm_medium=copy_link">coffeespotsv</a> </h2>
+            <video width="320px" height="520px" controls>
+                <source src="/static/videos/Cafe.mp4" type="video/mp4">
+
+            </video>
+        </aside>
+
+    </section>
+</body>
+</html>

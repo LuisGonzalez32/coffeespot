@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style9.css">
+    <title>Contactanos</title>
+</head>
+<body>
+
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <section class="main">
+        <section class="articles">
+            <article>
+                <h1>Horario:</h1>
+                <pre>
+                    <li>Lunes-Viernes       6:00 - 6:00</li>
+                    <li>Fin de Semana       8:00 - 6:00</li>
+                </pre>
+            </article>
+            <article>
+                <h1>Contactos: </h1>
+                <p>Numero de Telefono</p>
+            </article>
+
+
+        </section>
+
+        <aside>
+            <h2>Ubicación:</h2>
+            <p>Visitanos en el Comedor La Estancia en San Rafael Cedros.</p>
+            <video width="350px" height="400px" controls>
+                <source src="/static/videos/Ubicacion.mp4" type="video/mp4">
+
+            </video>
+        </aside>
+
+
+</body>
+<style>
+    body{
+        background: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
+        url("/static/imagenes/coffeespot.jpg") no-repeat center
+        center fixed;
+        background-size: cover;
+    }
+</style>
+
+
+</html>

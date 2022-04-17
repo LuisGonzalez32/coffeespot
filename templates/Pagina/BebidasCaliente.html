@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style3.css">
+    <title>Bebidas Calientes</title>
+</head>
+<body>
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <h2>Bebidas Calientes</h2>
+
+<section>
+  <nav2>
+    <ul>
+        <pre><li>Americano                                $1.50</li>
+            <li>Cappuggino                              $1.75</li>
+            <li>Mocha                                         $1.75</li>
+            <li>latte                                           $1.75</li>
+            <li>Mocha Menta                            $1.75</li>
+    </ul>
+  </nav2>
+  
+  <article>
+    <img src="/static/imagenes/BebidasCalientes.jpg" alt="Foto" width="765" height="550">
+  </article>
+</section>
+
+<footer>
+  <pre>El Cappuggino y el Latte pueden ser con Vainilla</pre>
+</footer>
+
+
+</body>
+</html>

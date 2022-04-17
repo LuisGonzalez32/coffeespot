@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style5.css">
+    <title>Bebidas</title>
+</head>
+<body>
+
+    <header>
+        <div class="container_menu">
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('auth.register') }}">Inicio</a></li>
+                        <li><a href="{{ url_for('auth.Bebidas') }}">Bebidas</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.BebidasCaliente') }}">Bebidas Calientes</a></li>
+                                <li><a href="{{ url_for('auth.BebidasFrias') }}">Bebidas Frias</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carta</a>
+                            <ul>
+                                <li><a href="{{ url_for('auth.Postres') }}">Postres</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('auth.promociones') }}">Promociones</a></li>
+                        <li><a href="{{ url_for('auth.About') }}">Sobre nuestro cafe</a></li>
+                        <li><a href="{{ url_for('auth.Contactos') }}">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <h1>Nuestras Bebidas</h1>
+    <p>Refrescate en una tipica tarde calurosa con nuestras bebidas fria en basadas en cafe o si eres alguien que prefiere lo tradicional nuestras bebidas calientes son las ideales para ti. Que esperas entonces ven y goza de cualquiera de las dos:</p>
+
+    <section class="ContainerButton">
+        <a href="{{ url_for('auth.BebidasCaliente') }}" class="btn btn-primary">Bebidas Calientes</a>
+        <a href="{{ url_for('auth.BebidasFrias') }}" class="btn btn-second">Bebidas Frias</a>
+    </section>
+
+    <style>
+        body{
+            background: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
+            url("/static/imagenes/NuestrasBebidas.jpeg") no-repeat center
+            center fixed;
+            background-size: cover;
+        }
+    </style>
+
+
+
+
+</body>
+
+</html>
