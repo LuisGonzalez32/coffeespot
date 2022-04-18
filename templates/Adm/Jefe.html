@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/stylejefe.css">
+    <title>Jefe</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+    <h1>Elige donde quieres dirigirte</h1>
+
+    <section class="ContainerButton">
+        <a href="{{ url_for('auth.BebidasCaliente') }}" class="btn btn-primary"> Recursos humanos</a>
+        <a href="{{ url_for('auth.BebidasFrias') }}" class="btn btn-second">Finanzas</a>
+    </section>
+
+    <style>
+        body{
+            background: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
+            url("/static/imagenes/Granos.jpg") no-repeat center
+            center fixed;
+            background-size: cover;
+        }
+    </style>
+
+
+
+
+</body>
+
+</html>

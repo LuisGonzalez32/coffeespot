@@ -24,12 +24,12 @@ def login():
         if currentUser:
             if bcrypt.check_password_hash(currentUser.password, password):
                 login_user(currentUser)
-            return redirect(url_for("auth.finanzas"))
+            return redirect(url_for("auth.adm"))
     return render_template("login.html", form=form)
 
-@auth.route("/finanzas")
+@auth.route("/adm")
 @login_required
-def finanzas():
+def amd():
     userList = None
     if "admin" in current_user.rank:
         # es un admin
@@ -37,7 +37,7 @@ def finanzas():
     else:
         # es un user
         userList = list((User.query.filter_by(id=current_user.id).first(),))
-    return render_template("RRHH/home.html", user=current_user, userList=userList)
+    return render_template("adm/jefe.html", user=current_user, userList=userList)
 
 
 @auth.route("/cose", methods=["GET", "POST"])
