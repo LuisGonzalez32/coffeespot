@@ -41,7 +41,7 @@ def cose():
         username = form.username.data
         password = form.password.data
         hashed_password = bcrypt.generate_password_hash(password)
-        newUser = User(username, hashed_password, "active", "user")
+        newUser = User(username, hashed_password)
         db.session.add(newUser)
         db.session.commit()
         return redirect(url_for("auth.login"))

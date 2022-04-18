@@ -24,7 +24,7 @@ def create():
         newRecursos = User(username, hashed_password)
         db.session.add(newRecursos)
         db.session.commit()
-        return redirect(url_for("RRHH/Recursos.home"))
+        return redirect(url_for("Recursos.home"))
     return render_template("RRHH/create.html", form=form)
 
 
