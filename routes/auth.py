@@ -27,7 +27,7 @@ def login():
             return redirect(url_for("auth.finanzas"))
     return render_template("login.html", form=form)
 
-@auth.route("/")
+@auth.route("/finanzas")
 @login_required
 def finanzas():
     userList = None
