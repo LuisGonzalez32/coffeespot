@@ -7,7 +7,7 @@ class User(db.Model):
     password = db.Column(db.String(200), nullable=False)
  
 
-    def __init__(self, username, password) -> None:
+    def __init__(self, username, password):
         self.username = username
         self.password = password
         
