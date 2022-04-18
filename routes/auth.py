@@ -27,17 +27,11 @@ def login():
             return redirect(url_for("auth.adm"))
     return render_template("login.html", form=form)
 
+
 @auth.route("/adm")
 @login_required
-def amd():
-    userList = None
-    if "admin" in current_user.rank:
-        # es un admin
-        userList = User.query.all()
-    else:
-        # es un user
-        userList = list((User.query.filter_by(id=current_user.id).first(),))
-    return render_template("adm/jefe.html", user=current_user, userList=userList)
+def adm():
+    return render_template("Adm/Jefe.html")
 
 
 @auth.route("/cose", methods=["GET", "POST"])
