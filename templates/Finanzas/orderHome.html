@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block title %}orders home{% endblock %}
+{% block contents %}
+<h1>orders home</h1>
+<br>
+{% if user %}
+<p>Hello, {{user.username}} rank: {{user.rank}}</p>
+<br>
+<a href="{{ url_for('auth.logout') }}">logout</a>
+{% endif %}
+<p>review all the orders</p>
+<br>
+<a href="{{ url_for('orders.create') }}">create an order</a>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>buyer</th>
+            <th>provider</th>
+            <th>totalSale</th>
+            <th>orderCode</th>
+            <th>date</th>
+            <th>saleCode</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.buyer }}</td>
+            <td>{{ item.provider }}</td>
+            <td>{{ item.totalSale }}</td>
+            <td>{{ item.orderCode }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.saleCode }}</td>
+            <td><a href="{{ url_for('orderDetails.homeByOrderId', orderId=item.id) }}">add details</a></td>
+            <td>
+                {% if item.date == None %}
+                <a href="{{ url_for('orders.finalize', id=item.id) }}">finalize</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

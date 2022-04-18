@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block title %}order details home{% endblock %}
+{% block contents %}
+<h1>order details home</h1>
+<br>
+{% if user %}
+<p>Hello, {{user.username}} rank: {{user.rank}}</p>
+<br>
+<a href="{{ url_for('auth.logout') }}">logout</a>
+{% endif %}
+<p>review all the orders details</p>
+<br>
+{% if order %}
+<p>order:</p>
+<ul>
+    <li>{{ order.id }}</li>
+    <li>{{ order.buyer }}</li>
+    <li>{{ order.provider }}</li>
+    <li>$ {{ order.totalSale }}</li>
+</ul>
+{% endif %}
+<br>
+<a href="{{ url_for('orderDetails.createByOrderId', orderId=order.id) }}">create an order detail</a>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>orderId</th>
+            <th>quantity</th>
+            <th>description</th>
+            <th>unitCost</th>
+            <th>totalCost</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.orderId }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.unitCost }}</td>
+            <td>{{ item.totalCost }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

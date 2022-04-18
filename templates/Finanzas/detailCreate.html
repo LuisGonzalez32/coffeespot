@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}order details create{% endblock %}
+{% block contents %}
+<h1>order details create</h1>
+<br>
+{% if user %}
+<p>Hello, {{user.username}} rank: {{user.rank}}</p>
+<br>
+<a href="{{ url_for('auth.logout') }}">logout</a>
+{% endif %}
+<p>please create your order detail here:</p>
+<br>
+<form action="{{ url_for('orderDetails.createByOrderId', orderId=orderId) }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.orderId.label }}
+    {{ form.orderId }}
+    {{ form.description.label }}
+    {{ form.description }}
+    {{ form.quantity.label }}
+    {{ form.quantity }}
+    {{ form.unitCost.label }}
+    {{ form.unitCost }}
+    {{ form.submit }}
+</form>
+
+{% endblock %}
